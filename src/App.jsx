@@ -1,8 +1,16 @@
 
-const App = ()=>{
+import { Routes, Route } from "react-router"
+
+import Browse from "./components/Browse"
+import Login from "./components/Login"
+
+const App = () => {
   return (
     <>
-    <h1 class="bg-amber-600 " >Netfilx GPT</h1>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/browse" element={< Browse />} />
+      </Routes>
     </>
   )
 }
